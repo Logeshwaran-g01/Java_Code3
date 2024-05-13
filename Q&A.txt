@@ -1,0 +1,54 @@
+1) What are the 4 access modifier available in java and what is their significant on terms of  class method  and variable?
+
+
+public: Members (methods, variables, classes) marked as public are accessible from any other class.
+
+protected: Members marked as protected are accessible within the same package or by subclasses in different packages.
+
+default (no modifier): Also known as package-private. If no access modifier is specified, the member is accessible only within the same package.
+
+private: Members marked as private are accessible only within the same class.
+
+These access modifiers control the visibility and accessibility of classes, methods, and variables in Java:
+
+Class: The access modifier applied to a class determines where that class can be accessed from. For example, a public class can be accessed from any other class, while a private class can only be accessed from within its own class.
+
+Method: Access modifiers applied to methods control who can call them. public methods can be called from any other class, protected methods can be called from subclasses or classes in the same package, default methods can be called only from classes in the same package, and private methods can only be called from within the same class.
+
+Variable: Access modifiers applied to variables also control their visibility. public, protected, and private variables have similar accessibility rules to methods, while default variables are accessible only within the same package.
+
+
+
+2) What is diff between Exception and error?
+
+Exceptions:
+
+Exceptions are conditions that occur because of bad input, improper usage of resources, or other anomalies that occur during the execution of a program.
+Exceptions are expected to be caught and handled by the program. They can be checked exceptions (which are checked at compile time and require handling) or unchecked exceptions (which are not required to be caught or declared).
+Examples of exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and FileNotFoundException.
+Errors:
+
+Errors, on the other hand, are exceptional conditions that are external to the application, and that the application usually cannot handle.
+Errors are typically caused by the environment in which application is running, and they are serious problems that can cause the application to terminate.
+Unlike exceptions, errors are typically not caught or handled by the program.
+Examples of errors include OutOfMemoryError, StackOverflowError, and VirtualMachineError
+
+
+3) What is diff between Check Exception and uncheck Exception?
+
+
+Checked Exceptions:
+
+Checked exceptions are subclasses of Exception (except for RuntimeException and its subclasses) that the compiler requires the programmer to either catch or declare in the method signature using a throws clause.
+Checked exceptions typically represent conditions that a program can reasonably be expected to recover from, and the compiler ensures that they are properly handled or declared at compile time.
+Examples of checked exceptions include IOException, SQLException, and ClassNotFoundException.
+Unchecked Exceptions:
+
+Unchecked exceptions are subclasses of RuntimeException and its subclasses. Unlike checked exceptions, unchecked exceptions are not required to be caught or declared by the programmer.
+Unchecked exceptions typically represent programming errors, logic errors, or other exceptional conditions that indicate a problem with the code itself rather than with the program's environment or external factors.
+Because unchecked exceptions are not checked by the compiler at compile time, they can be thrown and propagated without being explicitly caught or declared.
+Examples of unchecked exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and IllegalArgumentException
+
+
+
+
